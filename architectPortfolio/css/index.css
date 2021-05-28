@@ -1,0 +1,107 @@
+/*GLOBAL SETTINGS*/
+/*This design was inspired by the How&How webpage:
+https://how.studio/ */
+
+/* RGB(VERDE) 105 167 59 */
+/* RGB(LIGHT GRAY) 106 105 105 */
+/* RGB(DARK GRAY) 85 84 84 */
+
+p {
+    margin:2%;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* MAIN DIVISION SETTINGS*/
+.wrapper {
+    min-width:500px;
+    max-width:1200px;
+    margin:20px auto 0px auto;
+    background-color: white;
+    font-family: 'Calibri';
+    font-weight:lighter; 
+}
+/*-----------------------------------*/
+
+/* HEADER */
+header {
+    font-size:250%;
+    color: #fbfaf5; 
+    min-width:500px;
+}
+header:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#logo_format {
+    width:180px;
+    height:auto;
+    float:left;
+}
+/*-----------------------------------*/
+
+/* HOME PHRASE PARAGRAPH*/
+.home_phrase {
+    font-family:'Corbel';
+    font-size: 3rem;
+    line-height: 4rem; 
+    margin-top: 5%;
+    margin-right: 25%;
+}
+.align_right {
+    margin-left: 25%;
+    margin-right: 0%;
+}
+.font_century{
+    font-family: 'Snell Roundhand, cursive';
+    font-weight: lighter;
+}
+
+/*NAVIGATION MENU*/
+nav {
+    font-size:1.7rem;
+    background-color: rgb(106, 105, 105);
+    color: white;
+    float:right;
+    clear:both;
+}
+nav:hover{
+    width: 84%;
+}
+
+nav:hover ul{
+    display:block;                  /* items appear on hover */
+    position:relative;
+    float:right;
+    text-align:left;
+    width:100%;                     /* get width of parent element (nav) otherwise text width is taken */
+}
+
+nav>ul:first-child {                /* only affects the first child of the ul in nav (MENU)*/
+    margin:8px 0px 8px 8px;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+nav li ul {                         /* only affects the unordered list inside the li MENU*/ 
+    display:none;                   /* items normally hide */
+    background-color: rgb(105, 167, 59);
+    padding-bottom: 20px;
+}
+nav li li{                          /* intems inside the navigation */
+    font-size: 4rem;
+    margin: 2% 0% 0% 2%;
+}
+/*-----------------------------------*/
+footer > a{
+    color:rgb(85,84,84);
+    font-weight: bolder;
+}
+footer{
+    margin-top:20px;
+    margin-bottom:20px;
+}

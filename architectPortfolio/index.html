@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css"/>
+    <title>Portfolio T. von Kruger</title>
+    <script>
+        function hideMenu(){
+            var menu = document.getElementById("menu");
+            var phrase = document.getElementsByClassName("home_phrase");
+            menu.style.display = "none";
+            phrase[0].style.display = "none";
+            phrase[1].style.display = "none";
+            phrase[2].style.display = "none";
+            document.getElementsByTagName("footer")[0].style.display="none";
+        }
+        function showMenu(){
+            var menu = document.getElementById("menu");
+            var phrase = document.getElementsByClassName("home_phrase");
+            menu.style.display = "inline-block";
+            phrase[0].style.display = "block";
+            phrase[1].style.display = "block";
+            phrase[2].style.display = "block";
+            document.getElementsByTagName("footer")[0].style.display="block";
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html" title="Home">
+                    <img src="logos/logo.png" id="logo_format" alt="logo tvk"/>
+            </a>
+        </header> 
+        <nav onmouseover="hideMenu()" onmouseout="showMenu()">
+            <ul id="menu">
+                <li>
+                    MENU
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="aboutme.html">About me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <p class="home_phrase">It is not about lack of space</p>
+        <p class="home_phrase align_right">but to think outside the box</p>
+        <p class="home_phrase">and be creative with each <span class="font_century">detail</span></p>
+        <footer>
+            <a href="https://www.thomasmore.be/en/welcome">Copyright &copy; Thomas More Mechelen-Antwerp vzw -Campus De Nayer -Professional bachelor electronics-ict -2021</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- HTML VALIDATED -->

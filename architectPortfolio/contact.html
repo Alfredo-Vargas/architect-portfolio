@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact T. von Kruger</title>
+    <script>
+        var valid = false
+        function hideForm(){
+            document.getElementById("contact_details").style.visibility = "hidden";
+            document.getElementById("menu").style.display ="none";
+            document.getElementsByTagName("footer")[0].style.display="none";
+        }
+         function showForm(){
+            document.getElementById("contact_details").style.visibility = "visible";
+            document.getElementById("menu").style.display = "inline-block";
+            document.getElementsByTagName("footer")[0].style.display="block";
+        }
+        function validateEmail(){
+            email = document.getElementById("email").value;
+            if (email.indexOf('.') != -1 && email.indexOf('@') != -1){
+                document.getElementById("feedback").style.display = "block";
+                valid = true;
+            }
+            else {
+                document.getElementById("feedback").style.display = "none";
+                valid = false;
+            }
+            return valid
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html" title="Home">
+                    <img src="logos/logo.png" id="logo_format" alt="logo tvk"/>
+            </a>
+        </header> 
+        <nav onmouseover="hideForm()" onmouseout="showForm()">
+            <ul id="menu">
+                <li>
+                    MENU
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="aboutme.html">About me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <form action="mailto:tnvkruger@gmail.com?subject=formresult" method="post" id="contact_details" onsubmit="return validateEmail()">
+            <div id="legend">
+                <ul>
+                    <li>Please fill up the Mondrian Table below:</li>
+                    <li>Write your comments in the red box.</li>
+                    <li>Insert your email in the yellow box.</li>
+                    <li>Click on the blue Send button to submit.</li>
+                </ul>
+            </div>
+            <table id="mondrian_table">
+                <tbody>
+                    <tr>
+                        <td colspan="8"></td> <td colspan="14"></td> <td colspan="10" class="yellowbox"></td> <td colspan="2" rowspan="6" class="narrow"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" rowspan="2" class="medium"></td> <td colspan="18" rowspan="4" class="redbox"><textarea id="comments" name="comments">Here your comments ...</textarea></td> <td colspan="10" rowspan="2" class="yellowbox"><textarea name="email" id="email">Here your email</textarea></td> 
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td colspan="4" rowspan="3"></td>  <td colspan="5" rowspan="2"></td> <td colspan="5" rowspan="2"></td> 
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td colspan="9" rowspan="2" class="blackbox"><textarea id="feedback">Your form was submited successfully &#128578;</textarea></td> <td colspan="9"></td> <td colspan="10"></td> 
+                    </tr>
+                    <tr>
+                        <td colspan="4" rowspan="3" class="yellowbox"></td>  <td colspan="9"></td> <td colspan="10" rowspan="2" class="bluebox"><input type="submit" value="Send" form="contact_details" id="submit"> </td> <td colspan="2" rowspan="3" class="redbox"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="9" rowspan="2"></td> <td colspan="9" class="blackbox"><input type="reset" value="Reset" id="reset"></td> 
+                    </tr>
+                    <tr>
+                        <td colspan="19" class="dwarf"></td> 
+                    </tr>
+                </tbody>
+           </table>
+        </form>
+        <footer>
+            <a href="https://www.thomasmore.be/en/welcome">Copyright &copy; Thomas More Mechelen-Antwerp vzw -Campus De Nayer -Professional bachelor electronics-ict -2021</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- THE CODE HAS 9 ERROR OF VALIDATION -->
+<!-- All those errors complain that are rows or cells that are empty -->
+<!-- This was made on purpose to make a Table look like a Mondrian -->

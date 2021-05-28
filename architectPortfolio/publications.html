@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="publications.css"/>
+    <title>Portfolio T. von Kruger</title>
+    <script>
+        function hideMenu(){
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("title").style.display = "none";
+            document.getElementById("subtitle").style.display = "none";
+            document.getElementById("thesis_container").style.display = "none";
+            document.getElementsByTagName("footer")[0].style.display="none";
+        }
+        function showMenu(){
+            document.getElementById("menu").style.display = "inline-block";
+            document.getElementById("title").style.display = "block";
+            document.getElementById("subtitle").style.display = "block";
+            document.getElementById("thesis_container").style.display = "flex";
+            document.getElementsByTagName("footer")[0].style.display="block";
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html" title="Home">
+                    <img src="logos/logo.png" id="logo_format" alt="logo tvk"/>
+            </a>
+        </header> 
+        <nav onmouseover="hideMenu()" onmouseout="showMenu()">
+            <ul id="menu">
+                <li>
+                    MENU
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="aboutme.html">About me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="title"><h1>Gebouwen van gisteren voor de architecten van morgen</h1></div>
+        <div id="subtitle"><h2>Een casestudie over de herbstemming van historische gebouwen tot faculteit architectuur</h2></div>
+        <div id="thesis_container">
+            <div>
+               <img src="proj_img/cover.png" alt="thesis cover"> 
+            </div>
+            <div>
+                <p>
+                    De herbestemming van bestaande constructies is geen recent fenomeen. Al voor het ontstaan van de architectuurdiscipline maakte men gebruik van beschikbare structuren en paste ze aan zijn behoeften aan. Een van de open vragen van de huidige samenleving is hoe op een duurzame manier om te gaan met het patrimonium.
+                </p>
+                <p>
+                    Het thema van deze scriptie is niet alleen de behandeling van de technische en bouwfysische aspecten van de herbestemming, maar eerder het onderzoeken van de relatie tussen de erfgoedwaarde(n) van de bestaande architectuur en het nieuwe gebruik ervan. De keuze voor faculteit architectuur als studieobject is gemotiveerd door de potentiële invloed van de omgeving op de gebruikers. Er is een nauwe band tussen de architectuur voor het onderwijs en het architectuuronderwijs. Maar in hoeverre zijn de huidige noden en verwachtingen voor het architectuuronderwijs compatibel met de herbestemming van waardevolle historische gebouwen?
+                </p>
+                <p>
+                    Om deze vraag te kunnen beantwoorden, moet eerst het spanningsveld tussen de aanwezige erfgoedwaarden en noden van het onderwijs bekeken worden. De oplossingen voor functionele en technische vraagstukken variëren afhankelijk van de mogelijkheden van elk gebouw. Eveneens bepalen de aanwezige erfgoedwaarde(n) de gekozen ontwerpstrategieën. Hiervoor wordt een kleinschalige casestudie ontwikkeld met vijf beschermde gebouwen die herbestemd worden om de opleiding architectuur te huisvesten. Elke casus wordt gekaderd en nadien geanalyseerd. Er wordt eerst een ‘verticale’ analyse per project gedaan, gevolgd door een ‘horizontale’ analyse met de vergelijking van de verschillende casussen.
+                </p>
+            </div>
+            <div>
+                <p>
+                    Hoewel het niet altijd even gemakkelijk is om een complex programma zoals dat van een architectuuropleiding in een gebouw met vele restricties in te puzzelen, betekenen deze historische panden zeker een meerwaarde voor de instellingen. In de uitgevoerde analyses wordt er een sterke relatie tussen erfgoedwaarden en architectuuronderwijs waargenomen. Er worden vier verschillende functies geïdentificeerd die de erfgoedwaarde(n) in het onderwijs kunnen spelen: Pedagogisch, Inspirerend, Ceremonieel of Functioneel. De historische gebouwen bieden studenten niet alleen een dynamische en unieke leeromgeving, maar dragen ook op didactische wijze met hun erfgoedwaarden bij aan de ontwikkeling van toekomstige architecten.
+                </p>
+            </div>
+             <div>
+               <img src="proj_img/symbol.jpg" alt="thesis cover"> 
+            </div>           
+
+        </div>
+        <footer>
+            <a href="https://www.thomasmore.be/en/welcome">Copyright &copy; Thomas More Mechelen-Antwerp vzw -Campus De Nayer -Professional bachelor electronics-ict -2021</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- HTML VALIDATED -->
