@@ -87,6 +87,9 @@ nav li li{                          /* intems inside the navigation */
 
 #img_container{
     display:inline-block;
+    left:0px;
+    right:0px;
+    margin:auto;
 }
 .mySlides{
     display:none; /* all figures are hiden by default*/
