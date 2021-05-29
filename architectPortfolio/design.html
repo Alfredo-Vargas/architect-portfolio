@@ -10,6 +10,19 @@
     <script>
         var slide_number = 1;
         var legend_array = ["Dice Stools", "Chest of Dressing", "Center-Side Table", "Sofa-Table", "Puff-Shelf"];
+        
+        const slider = document.getElementsByClassName("mySlides");
+        let isDragging = false; // to indicate if cursors is dragging
+        currentTranslate = 0;
+        prevTranslate = 0;
+        animationID = 0;
+        currentIndex = 0;
+
+        mySlides.foreach((slide, index) => {
+            const slideImage = document.getElementsByClassName("mySlides");
+            slideImage.addEventListener('dragstart', (e) => e.preventDefault())
+        });
+
         function addNumber(number){
             showSlide(slide_number += number);
         }
@@ -89,7 +102,7 @@
             </ul>
         </nav>
         <!-- SlideShow idea taken from: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self -->
-        <div id="img_container">
+        <div id="img_container" class="grabbing">
             <img class="mySlides" src="proj_img/bancodado0.jpg" alt="dice stool" onclick="showPoster('cube_poster')">
             <img class="mySlides" src="proj_img/comoda0a.jpg" alt="chest of drawers" onclick="showPoster('comoda_poster')">
             <img class="mySlides" src="proj_img/mesa0a.jpg" alt="glass center table" onclick="showPoster('mesa_poster')">
