@@ -1,0 +1,140 @@
+/*GLOBAL SETTINGS*/
+.wrapper{
+    font-family: 'Calibri';
+    font-weight:lighter; 
+    font-size:16px; /* metric reference for other measurements on parent div */
+}
+
+/*-----------------------------------*/
+/*HEADER*/
+header{
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+}
+a.logo, a.logo:visited, a.logo:active {
+    text-decoration:none;
+}
+#logo div:first-child, #logo div:nth-child(2){
+    color: rgb(85,84,84);
+}
+    #logo div:last-child{
+        color: white;
+        background-color: rgb(105,105,105);
+    }
+/*MENU*/
+#menu{
+    float:right;
+}
+/*-----------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /*HEADER*/
+    header{
+        width:100px;
+        line-height: 1.2rem;
+    }
+
+    #logo div:first-child, #logo div:nth-child(2){
+        font-size:0.8rem;
+        letter-spacing: 2px;
+    }
+    #logo div:last-child{
+        width:90px;
+        letter-spacing: 2px;
+        margin-left:2px;
+        margin-right:2px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .wrapper{
+        margin:1%;
+    }
+    /*HEADER*/
+    header{
+        font-size: 1.6rem;
+        width:200px;
+        line-height: 2rem;
+    }
+
+    #logo div:first-child, #logo div:nth-child(2){
+        font-size:1.4rem;
+        letter-spacing: 6px;
+    }
+    #logo div:last-child{
+        width:190px;
+        letter-spacing: 8px;
+        padding-left:4px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .wrapper{
+        margin:2%;
+    }
+    /*HEADER*/
+    header{
+        font-size: 2.4rem;
+        width:400px;
+        line-height: 3rem;
+    }
+
+    #logo div:first-child{
+        font-size:1.8rem;
+        letter-spacing: 19px;
+    }
+    #logo div:nth-child(2){
+        font-size:1.8rem;
+        letter-spacing: 22px;
+    }
+    #logo div:last-child{
+        width:370px;
+        letter-spacing: 22px;
+        padding-left:10px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 2400px) {
+    /*HEADER*/
+    header{
+        font-size: 3.4rem;
+        width:600px;
+        line-height: 4.5rem;
+    }
+
+    #logo div:first-child{
+        font-size:2.8rem;
+        letter-spacing: 28px;
+    }
+    #logo div:nth-child(2){
+        font-size:2.8rem;
+        letter-spacing: 33px;
+    }
+    #logo div:last-child{
+        width:558px;
+        letter-spacing: 38px;
+        padding-left:10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+}*/

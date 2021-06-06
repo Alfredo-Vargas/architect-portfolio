@@ -59,15 +59,26 @@
             </ul>
         </nav>
         <form action="mailto:tnvkruger@gmail.com?subject=formresult" method="post" id="contact_details" onsubmit="return validateEmail()">
-            <div id="legend">
+<!--            <div id="legend">
                 <ul>
                     <li>Please fill up the Mondrian Table below:</li>
                     <li>Write your comments in the red box.</li>
                     <li>Insert your email in the yellow box.</li>
                     <li>Click on the blue Send button to submit.</li>
                 </ul>
-            </div>
-            <table id="mondrian_table">
+            </div> -->
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+            <label for="email_text">Email</label>
+            <input type="text" id="email_text" name="email" placeholder="Your email...">
+
+            <input type="submit" value="Submit">
+<!--            <table id="mondrian_table">
                 <tbody>
                     <tr>
                         <td colspan="8"></td> <td colspan="14"></td> <td colspan="10" class="yellowbox"></td> <td colspan="2" rowspan="6" class="narrow"></td>
@@ -95,7 +106,7 @@
                         <td colspan="19" class="dwarf"></td> 
                     </tr>
                 </tbody>
-           </table>
+           </table> -->
         </form>
         <footer>
             <a href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;alfredo-vargas</a>
