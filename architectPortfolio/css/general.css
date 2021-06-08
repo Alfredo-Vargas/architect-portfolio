@@ -1,0 +1,304 @@
+/*GLOBAL SETTINGS*/
+:root{
+    --punch-green: rgb(105, 167, 59);
+    --light-grey: rgb(106, 105, 105);
+    --dark-grey: rgb(85, 84, 84);
+    --back-color: white;
+}
+.wrapper{
+    font-family: 'Times New Roman';
+    font-weight: lighter; 
+    font-size:16px; /* metric reference for other measurements on parent div */
+    min-width:300px;
+    z-index:0;
+}
+
+/*-----------------------------------*/
+/*HEADER*/
+header{
+    display:inline-flex;
+    flex-direction: column;
+    text-align:center;
+}
+a.logo, a.logo:visited, a.logo:active {
+    text-decoration:none;
+}
+#logo div:first-child, #logo div:nth-child(2){
+    color: var(--dark-grey);
+    background-color: var(--back-color);
+}
+#logo div:last-child{
+    color: var(--back-color);
+    background-color: var(--light-grey);
+}
+/*MENU*/
+#menu{
+    position:absolute;
+    right:0;
+    z-index:2;
+    border-radius: 100%;
+    border:none;
+    color: var(--dark-grey);
+    background-color: var(--back-color);
+    font-size: 2rem;
+    padding:5px;
+    transition-duration: 350ms;
+}
+#menu:hover {
+    color: var(--back-color);
+    transform: rotate(45deg);
+    background-color: var(--punch-green);
+}
+
+.close{
+    color: var(--back-color);
+    float:right;
+    height:50px;
+    width:50px;
+}
+.menu_items {
+    display:block;
+    width:100%;
+    height:100%;
+    background-color: var(--punch-green);
+    padding-left:5%;
+    position:absolute;
+    left:100%;
+    z-index:-1;
+}
+.menu_items a{
+    text-decoration: none;
+    color: var(--back-color);
+}
+.menu_items a:hover{
+    text-decoration: underline;
+}
+
+.myref{
+    color: var(--dark-grey);
+    text-decoration: none;
+}
+/*HOME PHRASE*/
+.home_phrase{
+    font-family:'Corbel';
+}
+.align_right{
+    text-align:right;
+
+}
+/*-----------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /*HEADER*/
+    .wrapper{
+        max-width:400px;
+        margin:auto;
+    }
+    header{
+        line-height: 1.2rem;
+        letter-spacing: 2px;
+        width:min-content;
+    }
+    #logo div:first-child, #logo div:nth-child(2){
+        font-size:0.6rem;
+    }
+    #logo div:last-child{
+        font-size:0.8rem;
+    }
+
+    /*MENU*/
+    #menu{
+        letter-spacing:4px;
+    }
+    .menu_items {
+        font-size:3rem;
+        line-height: 6.2rem;
+    }
+    
+    .myref{
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    /*HOME PHRASE*/
+    .home_phrase{
+        font-family:'Corbel';
+        font-size:1.0rem;
+        margin:30% 10% 55% 10%; 
+        line-height: 3rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+    .wrapper{
+        margin:1%;
+    }
+    /*HEADER*/
+    header{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        width:min-content;
+    }
+
+    #logo div:first-child, #logo div:nth-child(2){
+        font-size:1.2rem;
+        letter-spacing: 6px;
+    }
+    #logo div:last-child{
+        letter-spacing: 8px;
+    }
+
+    /*MENU*/
+    #menu{
+        font-size:1.6rem;
+        letter-spacing:4px;
+    }
+    .menu_items {
+        font-size:5rem;
+        line-height: 9rem;
+    }
+    .myref{
+        font-size: 1.6rem;
+    }
+    /*HOME PHRASE*/
+    .home_phrase{
+        margin:30% 10%; 
+        font-size:2.2rem;
+        line-height: 5rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .wrapper{
+        margin:2%;
+    }
+    /*HEADER*/
+    header{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        width:min-content;
+    }
+
+    #logo div:first-child, #logo div:nth-child(2){
+        font-size:1.2rem;
+        letter-spacing: 6px;
+    }
+    #logo div:last-child{
+        letter-spacing: 8px;
+        padding-left:4px;
+    }
+    /*HEADER
+    header{
+        font-size: 2.4rem;
+        width:400px;
+        line-height: 3rem;
+        width:min-content;
+    }
+
+    #logo div:first-child{
+        font-size:1.8rem;
+        letter-spacing: 19px;
+    }
+    #logo div:nth-child(2){
+        font-size:1.8rem;
+        letter-spacing: 22px;
+    }
+    #logo div:last-child{
+        letter-spacing: 22px;
+    }*/
+
+    /*MENU*/
+    #menu{
+        font-size:2.4rem;
+        letter-spacing:8px;
+    }
+    .close{
+        height:100px;
+        width:100px;
+    }
+    .menu_items {
+        float:right;
+        width:50%;
+        font-size:6rem;
+        line-height: 10rem;
+    }
+    .myref{
+        font-size: 2.2rem;
+    }
+    .home_phrase{
+        margin:10% 10%; 
+        font-size:3.0rem;
+        line-height: 6rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {
+    .wrapper{
+        margin:1%;
+    }
+    /*HEADER*/
+    header{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        width:min-content;
+    }
+
+    #logo div:first-child, #logo div:nth-child(2){
+        font-size:1.4rem;
+        letter-spacing: 6px;
+    }
+    #logo div:last-child{
+        letter-spacing: 8px;
+    }
+    /*HEADER
+    header{
+        font-size: 3.4rem;
+        width:600px;
+        line-height: 4.5rem;
+    }
+
+    #logo div:first-child{
+        font-size:2.8rem;
+        letter-spacing: 28px;
+    }
+    #logo div:nth-child(2){
+        font-size:2.8rem;
+        letter-spacing: 33px;
+    }
+    #logo div:last-child{
+        width:558px;
+        letter-spacing: 38px;
+        padding-left:10px;
+    }*/
+
+    /*MENU*/
+    #menu{
+        font-size:3.4rem;
+        letter-spacing:12px;
+    }
+    .menu_items {
+        float:right;
+        width:50%;
+        font-size:7rem;
+        line-height: 9rem;
+    }
+    .close{
+        height:100px;
+        width:100px;
+    }
+    .myref{
+        font-size: 2.2rem;
+    }
+    .home_phrase{
+        width:70%;
+        margin:10% 5%; 
+        font-size:5.8rem;
+        line-height: 15rem;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+}*/

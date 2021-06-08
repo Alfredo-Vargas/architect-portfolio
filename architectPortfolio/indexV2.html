@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/indexv2.css">
+    <link rel="stylesheet" href="css/general.css">
+    <script src="/js/general.js"></script>
     <title>Portfolio T. von Kr&#252;ger</title>
 </head>
     <body>
+    <button id="menu">
+        &plus;
+    </button>
     <div class="wrapper">
         <header>
             <a href="indexV2.html" title="Home" class="logo">
@@ -19,28 +23,24 @@
                 </div>
             </a>
         </header> 
-        <button id="menu">
-            MENU
-        </button>
-        <nav onmouseover="hideMenu()" onmouseout="showMenu()">
-            <ul>
-                <li>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="design.html">Design</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="aboutme.html">About me</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <p class="home_phrase">It is not about lack of space</p>
-        <p class="home_phrase align_right">but to think outside the box</p>
-        <p class="home_phrase">and be creative with each <span class="font_century">detail</span></p>
+        <div class="home_phrase">
+            <div>It is not about lack of space</div>
+            <div class="align_right">but to think outside the box</div>
+            <div>and be creative with each detai&#8467;</div>
+        </div>
         <footer>
-            <a href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;alfredo-vargas</a>
+            <a class="myref" href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;alfredo-vargas</a>
         </footer>
+    </div>
+    <div class="menu_items">
+        <ul>
+            <li><a href="indexV2.html">Home</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="myref" href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;alfredo-vargas</a>
     </div>
     </body>
 </html>
