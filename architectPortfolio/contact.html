@@ -15,7 +15,7 @@
     </button>
     <div class="wrapper">
         <header>
-            <a href="indexV2.html" title="Home" class="logo">
+            <a href="index.html" title="Home" class="logo">
                 <div id="logo">
                     <div>T. NICOLETTI</div>
                     <div>VON KR&#220;GER</div>
@@ -24,8 +24,17 @@
             </a>
         </header> 
         <div id="form_container">
-            <form action="mailto:tnvkruger@gmail.com?subject=formresult" method="post" id="contact_details" onsubmit="return validateEmail()"></form>
-        </form>
+            <form action="mailto:tnvkruger@gmail.com?subject=formresult" method="post" onsubmit="return validateEmail()"></form>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" value=""><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" value=""><br>
+                <label for="email">Your email:</label>
+                <input type="text" id="email" name="email" value=""><br>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="5" cols="10">here your comments...</textarea><br>
+                <input id="submit" type="submit" value="Submit">    
+            </form>
         </div>
 
         <footer>

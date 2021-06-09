@@ -5,7 +5,6 @@
     --dark-grey: rgb(85, 84, 84);
     --back-color: rgb(255, 255, 255);
 }
-
 .wrapper{
     font-family:'Corbel';
     font-weight: lighter; 
@@ -43,7 +42,6 @@ a.logo, a.logo:visited, a.logo:active {
     padding:5px;
     transition: transform 1000ms ease;
 }
-
 .close{
     color: var(--back-color);
     float:right;
@@ -68,7 +66,6 @@ a.logo, a.logo:visited, a.logo:active {
 .menu_items a:hover{
     text-decoration: underline;
 }
-
 .myref{
     color: var(--dark-grey);
     text-decoration: none;
@@ -77,10 +74,31 @@ a.logo, a.logo:visited, a.logo:active {
 .home_phrase{
     font-family:'Corbel';
 }
-
 .align_right{
     text-align:right;
 }
+/*CONTACT FORM*/
+#form_container{
+    font-family:'Corbel';
+    margin:10%;
+    display: flex;
+    flex-direction:column;
+}
+#comments{
+    font-family:'Corbel';
+}
+#submit{
+    width:max-content;
+    color: var(--back-color);
+    background-color: var(--light-grey);
+}
+
+#comments:focus, #fname:focus, #lname:focus{
+    outline: none !important;
+    border:1.5px solid var(--punch-green);
+    /*box-shadow: 0 0 10px var(--punch-green);*/
+}
+
 /*-----------------------------------*/
 
 /* Extra small devices (phones, 600px and down) */
