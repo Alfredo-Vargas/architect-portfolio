@@ -42,7 +42,7 @@ function animateIn(){
     menu.style.transform = "translateX(0%)";
     menu.style.visibility = "visible";
     cross.style.transform = "rotate(45deg)";
-    cross.style.backgroundColor = "#69a73b";
+    cross.style.backgroundColor = "pink";
     cross.style.color = "white";
     wrapper.style.width = "100%";
 }

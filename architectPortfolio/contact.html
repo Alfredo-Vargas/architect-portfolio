@@ -23,18 +23,27 @@
                 </div>
             </a>
         </header> 
-        <div id="form_container">
-            <form action="mailto:tnvkruger@gmail.com?subject=formresult" method="post" onsubmit="return validateEmail()"></form>
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" value=""><br>
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" value=""><br>
-                <label for="email">Your email:</label>
-                <input type="text" id="email" name="email" value=""><br>
-                <label for="comments">Comments:</label>
-                <textarea id="comments" name="comments" rows="5" cols="10">here your comments...</textarea><br>
-                <input id="submit" type="submit" value="Submit">    
-            </form>
+        <div id="bigform_container">
+            <div class="contact_images">
+                <img class="contact" id="img_mobile" src="/proj_img/contact_mobile.jpg" alt="pink flowers"><br>
+                <img class="contact" id="img_ipad" src="/proj_img/contact_ipad.jpg" alt="pink flowers"><br>
+                <img class="contact" id="img_desktop" src="/proj_img/contact_desktop.jpg" alt="pink flowers"><br>
+                <img class="contact" id="img_bigdesktop" src="/proj_img/contact_bigdesktop.jpg" alt="pink flowers"><br>
+            </div>
+            <div id="form_container">
+                <form action="mailto:tnvkruger@gmail.com?subject=formresult" method="post" onsubmit="return validateEmail()"></form>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" value=""><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" value=""><br>
+                    <label for="email">Your email:</label>
+                    <input type="text" id="email" name="email" value=""><br>
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="5" cols="10"></textarea><br>
+                    <input id="submit" type="submit" value="Submit">    
+                </form>
+            </div>
+
         </div>
 
         <footer>
