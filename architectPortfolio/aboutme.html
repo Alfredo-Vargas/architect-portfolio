@@ -4,134 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/architectPortfolio/css/reset.css">
-    <link rel="stylesheet" href="/architectPortfolio/css/aboutme.css"/>
-    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css"/>
+    <script src="/js/general.js"></script>
     <title>Portfolio T. von Kruger</title>
-    <script>
-        function hideMenu(){
-            document.getElementById("menu").style.display = "none";
-            document.getElementById("ball_container").style.visibility = "hidden";
-            document.getElementsByTagName("footer")[0].style.display="none";
-        }
-        function showMenu(){
-            document.getElementById("menu").style.display = "inline-block";
-            document.getElementById("ball_container").style.visibility = "visible";
-            document.getElementsByTagName("footer")[0].style.display="block";
-        }
-        function fadeInBalls(){
-
-        }
-
-        $(document).ready(function(){
-            /* SCROLL ANIMATION */
-            var position = $(window).scrollTop(); // Get initial position of vertical bar
-            var old_position = position;
-            var counter = 0;
-            var dx = 5;
-            $(window).scroll(function(){
-                var scroll = $(window).scrollTop(); // Get vertical bar position after scrolling
-                var y1;
-                var y2;
-                var yreset = "translateY(0px)";
-                y1 = "translateY(" + counter + "px)";
-                y2 = "translateY(-" + counter + "px)";
-                //console.log(scroll);
-                if (scroll > position) {
-                    counter += dx;
-                    $(".b1").css({"-webkit-transform":y1});
-                    $(".b12").css({"-webkit-transform":y1});
-                    $(".b13").css({"-webkit-transform":y1});
-                    $(".b2").css({"-webkit-transform":y1});
-                    $(".b21").css({"-webkit-transform":y1});
-                    $(".b22").css({"-webkit-transform":y1});
-                }
-                else{
-                    $(".b1").css({"-webkit-transform":y2});
-                    $(".b12").css({"-webkit-transform":y2});
-                    $(".b13").css({"-webkit-transform":y2});
-                    $(".b2").css({"-webkit-transform":y2});
-                    $(".b21").css({"-webkit-transform":y2});
-                    $(".b22").css({"-webkit-transform":y2});
-                    counter -= dx;
-                }
-                position = scroll;
-                if (scroll > 250){
-                    $(".b1").fadeOut(2000);
-                    $(".b12").fadeOut(2000);
-                    $(".b13").fadeOut(2000);
-                }
-                if (scroll > 350){
-                    $(".b2").fadeOut(2000);
-                    $(".b21").fadeOut(2000);
-                    $(".b22").fadeOut(2000, function(){
-                        $("#about_container").css('background-color', '#FFD28C');
-                    });
-                }
-                old_position = position;
-                if (counter != 0 && scroll == 0){ 
-                    $(".b1").css({"-webkit-transform":yreset});
-                    $(".b12").css({"-webkit-transform":yreset});
-                    $(".b13").css({"-webkit-transform":yreset});
-                    $(".b2").css({"-webkit-transform":yreset});
-                    $(".b21").css({"-webkit-transform":yreset});
-                    $(".b22").css({"-webkit-transform":yreset});
-                    $(".b1").fadeIn(2000);
-                    $(".b12").fadeIn(2000);
-                    $(".b13").fadeIn(2000);
-                    $(".b2").fadeIn(2000);
-                    $(".b21").fadeIn(2000);
-                    $(".b22").fadeIn(2000, function(){
-                        $("#about_container").css('background-color', 'white');
-                    counter = 0;
-                    });
-                }
-            });
-        });
-    </script>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <a href="index.html" title="Home">
-                    <img src="logos/logo.png" id="logo_format" alt="logo tvk"/>
-            </a>
-        </header> 
-        <nav onmouseover="hideMenu()" onmouseout="showMenu()">
-            <ul id="menu">
-                <li>
-                    MENU
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="aboutme.html">About me</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="ball_container">
-            <div class="b1"></div><div class="b2"><p>Communications<br>Management</p></div><div class="b3"><p><b>P</b>roject <br><b>M</b>anagement</p></div><div class="b1"><P>Cost<br>Management</P></div><div class="b21"><p><br>AutoCAD</p></div>
-            <div class="b12"><p>Sketchup</p></div><div class="b13"><p>Kerkythea</p></div><div class="b2"><p><br>English</p></div><div class="b22"><p><br>Spanish</p></div>
-            <div class="b1"><p><br>Italian</p></div><div class="b2"><p>Procurement <br>Management</p></div><div class="b1"><p>Office<br>Suite</p></div><div class="b3"><p><b>A</b>rchitecture<br> &#38; <br><b>H</b>eritage</p></div><div class="b3"><p><br><b>L</b>anguages</p></div>
-            <div class="b1"><p><br>Portuguese</p></div><div class="b2"><p><br>Dutch</p></div><div class="b1"><p><br>Illustrator</p></div><div class="b2"><p><br>Photoshop</p></div><div class="b1"><p><br>CorelDraw</p></div>
-        </div>
-        <div id="intro_container">
-            <div><a><img id="photo" src="proj_img/tvk.png" alt="front photo"></a></div>
-            <div id="greetings">
-                <p>Hi, nice too meet you. My name is</p>
-                <p>Tabitha Nicoletti von Kr&#252;ger</p>
+<button id="menu" onclick="toggleMenu()">
+    &plus;
+</button>
+<div class="wrapper">
+    <header>
+        <a href="index.html" title="Home" class="logo">
+            <div id="logo">
+                <div>T. NICOLETTI</div>
+                <div>VON KR&#220;GER</div>
+                <div>ARCHITECT</div>
+            </div>
+        </a>
+    </header>
+    <div class="part1">
+        <div class="laptops">
+            <div class="greetings">
+                <h1>
+                    Hello, my name is Tabitha.
+                </h1>
+                <div class="subtitle">
+                    <img id="profile_pic" src="/proj_img/tvk.png" alt="profile picture">
+                    <p>Nice to meet you!</p>
+                </div>
             </div>
         </div>
-        <div class="title">
+        <div class="intro2">
             <p>About me</p>
-        </div>
-        <div id="about_container">
-            <div>
+            <div id="me">
                 <p>
                     I am an architect and I come from Rio de Janeiro, Brazil. I'm a creative, dynamic person, but also 
                     eficient and organized. I love to travel and learn about different cultures. I'm interested in 
@@ -149,114 +55,151 @@
                 </p>
             </div>
         </div>
-
-        <div class="title"><p>Milestones</p></div> <!-- TITLE OF TIMELINE (here MILESTONES)-->
-    <!-- TIME LINE CODE EXTRACT AND ADAPT FROM:
-         https://codepen.io/yeasinarafat/pen/abBVMbm -->
-        <div class="timeline_container">
-            <div class="all-timelines">
-                <!-- SINGLE TIMELINE -->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2001 - 2006</h6> FEDERAL UNIVERSITY OF RIO DE JANEIRO, Brazil,
-                             Master in Architecture and Urban Planning
-                        </span>
-                        <div class="t-square"></div>
+    </div>
+    <div class="ball_container">
+        <div class="b1"></div><div class="b2"><p>Communications<br>Management</p></div><div class="b3"><p><b>P</b>roject <br><b>M</b>anagement</p></div><div class="b1"><P>Cost<br>Management</P></div><div class="b21"><p><br>AutoCAD</p></div>
+        <div class="b12"><p>Sketchup</p></div><div class="b13"><p>Kerkythea</p></div><div class="b2"><p><br>English</p></div><div class="b22"><p><br>Spanish</p></div>
+        <div class="b1"><p><br>Italian</p></div><div class="b2"><p>Procurement <br>Management</p></div><div class="b1"><p>Office<br>Suite</p></div><div class="b3"><p><b>A</b>rchitecture<br> &#38; <br><b>H</b>eritage</p></div><div class="b3"><p><br><b>L</b>anguages</p></div>
+        <div class="b1"><p><br>Portuguese</p></div><div class="b2"><p><br>Dutch</p></div><div class="b1"><p><br>Illustrator</p></div><div class="b2"><p><br>Photoshop</p></div><div class="b1"><p><br>CorelDraw</p></div> 
+    </div>
+    <div class="intro">
+        <p>About me</p>
+        <div id="me">
+            <p>
+                I am an architect and I come from Rio de Janeiro, Brazil. I'm a creative, dynamic person, but also 
+                eficient and organized. I love to travel and learn about different cultures. I'm interested in 
+                design and art I have a broad professional experience as architect and project manager.
+            </p>
+            <p>
+                I've lived in Belgium for almost four years. During this time I have acquired different academic
+                and personal skills. Four years ago I took a Dutch course and right afterwards I began my
+                master in heritage studies at the University of Antwerp. Meanwhile I've started working at the 
+                office DRIESEN-MEERSMAN-THOMAES Architecten (DMT). It was not always easy to combine my master 
+                studies with my work, but both experiences mutually complement each other. With the synergy 
+                between theory and practice I could learn and experiment at the same time. Now I finished my studies and 
+                I work full-time as an architect at DMT. I would like to share my work with others as well as 
+                get to know other architects' projects.
+            </p>
+        </div>
+    </div>
+    <div class="title"><p>Milestones</p></div> <!-- TITLE OF TIMELINE (here MILESTONES)-->
+<!-- TIME LINE CODE EXTRACT AND ADAPT FROM:
+        https://codepen.io/yeasinarafat/pen/abBVMbm -->
+    <div class="timeline_container">
+        <div class="all-timelines">
+            <!-- SINGLE TIMELINE -->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2001 - 2006</h6> FEDERAL UNIVERSITY OF RIO DE JANEIRO, Brazil,
+                            Master in Architecture and Urban Planning
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2006 - 2011</h6> STUDIO IGNEZ FERRAZ, Brazil, Architect-Designer
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2008 - 2013</h6> GPA Management & Architecture, Brazil, Partner
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2011 - 2013</h6> VS Projects & Consulting, Brazil, Project Manager
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2013 - 2015</h6> COPACABANA PALACE, Brazil, Project Assistent
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2014 - 2016</h6> GET&Uacute;LIO VARGAS INSTITUTE, Brazil, MBA Project Management
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2016 - 2017</h6> UNICAM, Italy, Course Informatics
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2017 - 2018</h6> LINGUAPOLIS, Dutch Course
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2018 - 2021</h6> University of Antwerp, Master in Heritage Studies
+                    </span>
+                    <div class="t-square"></div>
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+            <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
+                <div class="timeline-blank"></div>
+                <div class="timeline-text d-flex-2">
+                    <span>
+                        <h6>2018 - PRESENT</h6> DMT Architecten - Belgium, Project Architect
+                    </span>
+                    <div class="t-square"></div>
+                    <div class="more">
+                        <ul>
+                            <li>AAA</li>
+                            <li>BBB</li>
+                            <li>CCC</li>
+                       </ul>
                     </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2006 - 2011</h6> STUDIO IGNEZ FERRAZ, Brazil, Architect-Designer
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2008 - 2013</h6> GPA Management & Architecture, Brazil, Partner
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2011 - 2013</h6> VS Projects & Consulting, Brazil, Project Manager
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2013 - 2015</h6> COPACABANA PALACE, Brazil, Project Assistent
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2014 - 2016</h6> GET&Uacute;LIO VARGAS INSTITUTE, Brazil, MBA Project Management
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2016 - 2017</h6> UNICAM, Italy, Course Informatics
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2017 - 2018</h6> LINGUAPOLIS, Dutch Course
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2018 - 2021</h6> University of Antwerp, Master in Heritage Studies
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-                <div class="single-timeline d-flex-2"> <!-- opens a single timeline entry -->
-                    <div class="timeline-blank"></div>
-                    <div class="timeline-text d-flex-2">
-                        <span>
-                            <h6>2018 - PRESENT</h6> DMT Architecten - Belgium, Project Architect
-                        </span>
-                        <div class="t-square"></div>
-                    </div>
-                </div> <!-- closes single-timeline d-flex-2-->
-            </div>  <!-- closes class all-timelines -->
-        </div> <!-- Closes timeline_container-->
-        <footer>
-            <a href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;alfredo-vargas</a>
-        </footer>
-    </div>  <!-- Closes wrapper -->
+                </div>
+            </div> <!-- closes single-timeline d-flex-2-->
+        </div>  <!-- closes class all-timelines -->
+    </div> <!-- Closes timeline_container-->
+    <footer>
+        <a id="foot_ref" href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;avp</a>
+    </footer>
+</div>
+<div class="menu_items">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="aboutme.html">About me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="myref" href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;avp</a>
+</div>
 </body>
 </html>
-
-<!-- This HTML has 10 errors, all of them due to a h6 level is not supported as child for <span> tag
-    This is an artificial trick to allow a specific configuration in the alignment of every flexbox
-    item with the vertical alignment
--->

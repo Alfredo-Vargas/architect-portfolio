@@ -4,55 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/architectPortfolio/css/reset.css">
-    <link rel="stylesheet" href="/architectPortfolio/css/publications.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <script src="/js/general.js"></script>
     <title>Portfolio T. von Kruger</title>
-    <script>
-        function hideMenu(){
-            document.getElementById("menu").style.display = "none";
-            document.getElementById("title").style.display = "none";
-            document.getElementById("subtitle").style.display = "none";
-            document.getElementById("thesis_container").style.display = "none";
-            document.getElementsByTagName("footer")[0].style.display="none";
-        }
-        function showMenu(){
-            document.getElementById("menu").style.display = "inline-block";
-            document.getElementById("title").style.display = "block";
-            document.getElementById("subtitle").style.display = "block";
-            document.getElementById("thesis_container").style.display = "flex";
-            document.getElementsByTagName("footer")[0].style.display="block";
-        }
-    </script>
 </head>
+
 <body>
+    <button id="menu" onclick="toggleMenu()">
+        &plus;
+    </button>
     <div class="wrapper">
         <header>
-            <a href="index.html" title="Home">
-                    <img src="logos/logo.png" id="logo_format" alt="logo tvk"/>
+            <a href="index.html" title="Home" class="logo">
+                <div id="logo">
+                    <div>T. NICOLETTI</div>
+                    <div>VON KR&#220;GER</div>
+                    <div>ARCHITECT</div>
+                </div>
             </a>
         </header> 
-        <nav onmouseover="hideMenu()" onmouseout="showMenu()">
-            <ul id="menu">
-                <li>
-                    MENU
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="aboutme.html">About me</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="title"><h1>Gebouwen van gisteren voor de architecten van morgen</h1></div>
-        <div id="subtitle"><h2>Een casestudie over de herbstemming van historische gebouwen tot faculteit architectuur</h2></div>
+        <div id="title_p"><h2>Gebouwen van gisteren voor de architecten van morgen</h2></div>
+        <div id="subtitle_p"><h3>Een casestudie over de herbstemming van historische gebouwen tot faculteit architectuur</h3></div>
         <div id="thesis_container">
             <div>
-               <img src="proj_img/cover.png" alt="thesis cover"> 
+                <img src="proj_img/cover.png" alt="thesis cover"> 
             </div>
             <div>
                 <p>
@@ -70,14 +46,22 @@
                     Hoewel het niet altijd even gemakkelijk is om een complex programma zoals dat van een architectuuropleiding in een gebouw met vele restricties in te puzzelen, betekenen deze historische panden zeker een meerwaarde voor de instellingen. In de uitgevoerde analyses wordt er een sterke relatie tussen erfgoedwaarden en architectuuronderwijs waargenomen. Er worden vier verschillende functies geïdentificeerd die de erfgoedwaarde(n) in het onderwijs kunnen spelen: Pedagogisch, Inspirerend, Ceremonieel of Functioneel. De historische gebouwen bieden studenten niet alleen een dynamische en unieke leeromgeving, maar dragen ook op didactische wijze met hun erfgoedwaarden bij aan de ontwikkeling van toekomstige architecten.
                 </p>
             </div>
-             <div>
-               <img src="proj_img/symbol.jpg" alt="thesis cover"> 
+                <div>
+                <img src="proj_img/symbol.jpg" alt="thesis cover"> 
             </div>           
-
-        </div>
+            </div>
         <footer>
-            <a href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;alfredo-vargas</a>
+            <a id="foot_ref" href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;avp</a>
         </footer>
+    </div>
+    <div class="menu_items">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="myref" href="https://github.com/Alfredo-Vargas/architect-portfolio">&copy;avp</a>
     </div>
 </body>
 </html>

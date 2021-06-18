@@ -9,7 +9,6 @@
     --typewriterCharacters: 28;
 }
 .wrapper{
-    /*font-family:Arial, Helvetica, sans-serif;*/
     font-family:Gill Sans, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:16px; /* metric reference for other measurements on parent div */
     z-index:0;
@@ -143,6 +142,7 @@ h1{
     position: relative;
     width:max-content;
     min-width:max-content;
+    font-family: "Source Code Pro", monospace;
 }
 h1::before, h1::after{
     content:"";
@@ -153,6 +153,7 @@ h1::before, h1::after{
     left: 0;
 }
 h1::before{
+    padding: 4%;
     background-color: var(--back-color);
     animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
 }
@@ -162,7 +163,6 @@ h1::after {
     animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, 
     blink 750ms steps(49) infinite;
 }
-
 @keyframes typewriter {
     to{
         left: 100%;
@@ -178,6 +178,214 @@ h1::after {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* BALL CONTAINER */
+.ball_container{
+    margin:10% 10% 10% 10%;
+    display:flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    font-size: 28px;  /* this is the base unit used for reference (rem values would be scaled based on this)*/
+    max-width: 1000px;
+}
+
+/* we use 6 classes of balls to have enough flexibility to show some asymmetry */
+/* .b1 .b2 .b3 (small to big) .b22 as big as b2 but diff margin, .b12 as big as b1 but diff margin */
+/* .b13 as big as b1 but diff margin than .b1 and .b12 */
+.b1{
+    height: 75px;
+    width: 75px;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.b2{
+    height: 135px;
+    width: 135px;
+    background-color: var(--dark-grey);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.b3{
+    height: 235px;
+    width: 235px;
+    background-color: var(--punch-color);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.b3 > p{
+    text-align: center;
+    margin-top: 2.2rem;
+    font-size: 2rem;
+}
+.b2 > p, .b21 > p, .b22 > p{
+    text-align: center;
+    color:white;
+    font-size: 1rem;
+    margin-top: 2.8rem;
+    font-weight: bold;
+}
+.b1 > p, .b12 > p, .b13 > p{
+    text-align: center;
+    color:black;
+    font-size: 0.6rem;
+    margin-top: 1.5rem;
+    font-weight:bold;
+}
+.b21{
+    height: 135px;
+    width: 135px;
+    background-color: var(--dark-grey);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-top:4em;
+}
+.b12{
+    height: 65px;
+    width: 65px;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-top:8em;
+}
+.b13{
+    height: 65px;
+    width: 65px;
+    background-color: rgb(151, 151, 151);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-top:6em;
+}
+.b22{
+    height: 135px;
+    width: 135px;
+    background-color: var(--dark-grey);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-top:3em;
+}
+/* the html tag <b> was not enough so a increase in the font weight */
+b{  
+    font-weight: bolder;
+}
+.intro, #me{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    margin:5%;
+}
+.intro > p{
+    color: var(--dark-grey);
+}
+#me{
+    color: var(--light-grey);
+    line-height: 1.5rem;
+}
+
+/*TIMELINE CONTAINER*/
+.timeline_container{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+.title > p{
+    color: var(--dark-grey);
+    margin:5%;
+}
+/* to be applied to every entry container "single-timeline" and
+   to the text container with span tag: "timeline-text" */
+.d-flex-2{
+    display: flex;
+    align-items: center;
+}
+
+/* Parent of all timelines entries, this setting avoid overlapping of entries (its child items)
+   each child-item keeps its position to the each other and the parent*/
+.all-timelines{
+    position:relative; 
+}
+
+/* Vertical thin line */
+/* First :: is used to represent pseudo elements and single semicolon : to represent pseudoclass */
+/* eg. ::before and ::after vs :hover. WARNING before and after don't work with img (they are content!)*/
+/* is placing a single a vertical line inside .all-timelines but just before its content*/
+.all-timelines::before{
+    content:""; /* the content of the pseudo element is empty */
+    position: absolute; /* required so vertical line do not interfere with layout of timeline entries*/
+    left: 0px;
+    right: 0px;
+    margin: auto; /* combination of left 0, right 0 and margin auto places it in the middle */
+    height: 100%; /* height of parent element (timeline_container)*/ 
+    width: 2px;
+    background: var(--punch-color);
+    top: 20px;
+}
+.single-timeline{
+    margin-bottom: 22px; /* This gives the vertical space between two consecutive timeline entries */
+}
+.timeline-blank{
+    width:50%;          /* This element is introduced to occupy the blank spaces in the timeline */
+}
+.timeline-text h6{      /* format of h6 inside .timeline-text element */
+    color: var(--light-grey);
+    font-weight: 900;
+    display: inline-block;
+    font-size: 1rem;
+}
+.timeline-text span{    /* format of span inside .timeline-text element */
+    color: #000;
+    display: block;
+    width: 100%;
+}
+.single-timeline:nth-child(even)
+.timeline-text span{
+    text-align: right; /* only the even entries text are align to the right */
+}
+.t-square{
+    content:"";
+    position:absolute; /* required so square marker do not interfere with layout of timeline entries */
+    width: 12px;
+    height: 12px;
+    left: 0px;
+    right: 0px;
+    margin:auto;   /* combination of left 0, right 0 and margin auto places it in the middle */
+    background: var(--punch-color);
+    border-radius: 50%;
+}
+.single-timeline:nth-child(even){
+    flex-direction: row-reverse;  /* interchanges timeline blank with timeline-text for even entries */
+}
+.single-timeline:nth-child(even) /* format of even entries */
+.timeline-text{
+    width:50%; 
+    text-align: right;
+    margin-right: 3%;
+}
+.single-timeline:nth-child(odd) /* format of odd entries */
+.timeline-text{
+    width:50%;
+    text-align: left;
+    margin-left: 3%;
+}
+.more{
+    width:100%;
+    background-color: var(--punch-color);
+    color: var(--back-color);
+    display:none;
+}
+.intro2{
+    display:none;
+}
+/*THESIS CONTAINER*/
+#thesis_container{
+    display:flex;
 }
 /*-----------------------------------*/
 
@@ -235,6 +443,36 @@ h1::after {
         display:block;
         border-radius: 5%;
     }
+    /*TIMELINE*/
+	.all-timelines::before { /* so vertical line gets default alignment: goes to the left */
+		right: unset;
+		top: 0;
+	}
+	/* text of odd entries gets new settings */
+	.single-timeline:nth-child(n) .timeline-text {
+        margin-left: 5%;
+        width:100%;
+	}
+	/* text of even entries gets new settings */
+	.single-timeline:nth-child(2n) .timeline-text {
+        margin-left: 5%;
+        width:100%;
+	}
+    .single-timeline:nth-child(2n) .timeline-text span {
+        text-align: left; /* even entries now align to left when no there is not enough space */
+	}
+	.single-timeline:nth-child(n) .t-square { /* changes odd orange squares to the left */
+		left: -5px;
+		right: unset;
+	}
+	.single-timeline:nth-child(2n) .t-square { /* changes even orange squares to the left */
+		left: -5px;
+		right: unset;
+	}
+	.timeline-blank {
+		display: none;  /* we don't need to intercalate timeline entries with blank entries when we have no space */
+	}
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -297,6 +535,13 @@ h1::after {
         display:block;
         float:right;
         border-radius: 5%;
+    }
+    .greetings{
+        font-size: 2rem;
+    }
+    .ball_container{
+        width:90%;
+        margin:auto;
     }
 }
 
@@ -371,6 +616,39 @@ h1::after {
         float:right;
         border-radius: 5%;
     }
+    .greetings{
+        font-size: 1rem;
+        max-width:500px;
+    }
+    .f1{
+        display:flex;
+    }
+    .laptops{
+        display:flex;
+        flex-direction: column;
+        width:50%;
+    }
+    .ball_container{
+        width:90%;
+    }
+    .intro{
+        display:none;
+    }
+    .part1{
+        display:flex;
+    }
+    .intro2{
+        display:block;
+        width:50%;
+        margin-top:6.5%;
+        margin-right:6.5%;
+        opacity: 0;
+        transform: translateY(3rem);
+        animation:fadeInUp 2s ease calc(var(--typewriterSpeed) + 3s) forwards;
+    }
+   .subtitle{
+       margin-top:20%;
+   }
 }
 
 /* Extra large devices (large laptops and desktops, 1400px and up) */
@@ -444,4 +722,49 @@ h1::after {
         display:block;
         border-radius: 5%;
     }
+    .greetings{
+        font-size: 1.5rem;
+        max-width:500px;
+    }
+    .f1{
+        display:flex;
+    }
+    .laptops{
+        display:flex;
+        flex-direction: column;
+        width:50%;
+    }
+    .ball_container{
+        width:100%;
+    }
+    .intro{
+        display:none;
+    }
+    .part1{
+        display:flex;
+    }
+    .intro2{
+        font-size: 1.5rem;
+        display:block;
+        width:60%;
+        padding:0;
+        margin-top:6.5%;
+        margin-right:6.5%;
+        opacity: 0;
+        transform: translateY(3rem);
+        animation:fadeInUp 2s ease calc(var(--typewriterSpeed) + 3s) forwards;
+    }
+    .intro2 p {
+        line-height: 2rem;
+    }
+    .title p {
+        font-size: 1.5rem;
+        margin-left: 7%;
+    }
+   .subtitle{
+       margin-top:20%;
+   }
+   .timeline_container{
+       font-size: 1.5rem;
+   }
 }
