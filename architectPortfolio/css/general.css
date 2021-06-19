@@ -383,10 +383,11 @@ b{
 .intro2{
     display:none;
 }
-/*THESIS CONTAINER*/
+/*PUBLICATIONS*/
 #thesis_container{
-    display:flex;
+    margin:1rem;
 }
+
 /*-----------------------------------*/
 
 /* Extra small devices (phones, 600px and down) */
@@ -472,6 +473,24 @@ b{
 	.timeline-blank {
 		display: none;  /* we don't need to intercalate timeline entries with blank entries when we have no space */
 	}
+    /*PUBLICATIONS*/
+    h2{
+        font-size:1.5rem;
+    }
+    h3{
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #thesis_container img{
+        width:100%;
+    }
+
+    #thesis_container p {
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 
 }
 
@@ -542,6 +561,30 @@ b{
     .ball_container{
         width:90%;
         margin:auto;
+    }
+    /*PUBLICATIONS*/
+    #thesis_container{
+        margin: 3rem;
+    }
+    h2{
+        font-size:3rem;
+        line-height: 3rem;
+    }
+    h3{
+        font-size:1.5rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #thesis_container img{
+        width:100%;
+    }
+
+    #thesis_container p {
+        font-size:1.3rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -649,6 +692,30 @@ b{
    .subtitle{
        margin-top:20%;
    }
+    /*PUBLICATIONS*/
+    #thesis_container{
+        margin: 3rem;
+    }
+    h2{
+        font-size:3rem;
+        line-height: 3rem;
+    }
+    h3{
+        font-size:1.5rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #thesis_container img{
+        width:100%;
+    }
+
+    #thesis_container p {
+        font-size:1.3rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1400px and up) */
@@ -748,7 +815,7 @@ b{
         display:block;
         width:60%;
         padding:0;
-        margin-top:6.5%;
+        margin-top:3.0%;
         margin-right:6.5%;
         opacity: 0;
         transform: translateY(3rem);
