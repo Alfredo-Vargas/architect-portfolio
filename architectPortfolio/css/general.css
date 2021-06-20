@@ -5,7 +5,7 @@
     --light-grey: rgb(106, 105, 105);
     --dark-grey: rgb(85, 84, 84);
     --back-color: rgb(255, 255, 255);
-    --typewriterSpeed: 2s;
+    --typewriterSpeed: 1s;
     --typewriterCharacters: 28;
 }
 .wrapper{
@@ -129,8 +129,9 @@ a.logo, a.logo:visited, a.logo:active {
 }
 
 #profile_pic{
-    width:30%;
+    width:60%;
     display:inline;
+    border-radius: 50%;
 }
 .subtitle p {
     display:inline;
@@ -457,6 +458,12 @@ b{
         display:block;
         border-radius: 5%;
     }
+    #profile_pic{
+        width:80%;
+    }
+    .subtitle p{
+        font-size: 2rem;
+    }
     /*TIMELINE*/
 	.all-timelines::before { /* so vertical line gets default alignment: goes to the left */
 		right: unset;
@@ -568,6 +575,12 @@ b{
         float:right;
         border-radius: 5%;
     }
+    #profile_pic{
+        width:60%;
+    }
+    .subtitle p{
+        font-size: 3rem;
+    }
     .greetings{
         font-size: 2rem;
     }
@@ -665,6 +678,12 @@ b{
     }
     .contact_images{
         margin:10% 0%;
+    }
+    #profile_pic{
+        width:80%;
+    }
+    .subtitle p{
+        font-size: 3rem;
     }
     #img_desktop{
         width:100%;
