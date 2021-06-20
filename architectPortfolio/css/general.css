@@ -713,8 +713,13 @@ b{
     #thesis_container p {
         font-size:1.3rem;
         line-height: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin:0;
+    }
+    #flow > p + * {
+        margin-top: var(--flow-spacer, 2rem);
+    }
+    .paragraphs{
+        columns: 100px 2;
     }
 }
 
@@ -834,4 +839,39 @@ b{
    .timeline_container{
        font-size: 1.5rem;
    }
+    /*PUBLICATIONS*/
+    #thesis_container{
+        margin: 3rem;
+        max-width:1200px;
+        margin:auto;
+    }
+    h2{
+        font-size:4rem;
+        line-height: 4rem;
+    }
+    h3{
+        font-size:2rem;
+        line-height: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #thesis_container img{
+        width:100%;
+    }
+
+    #thesis_container p {
+        font-size:1.5rem;
+        line-height: 2.4rem;
+        margin:0;
+    }
+    #flow > p + * {
+        margin-top: var(--flow-spacer, 2rem);
+    }
+    .paragraphs{
+        columns: 2;
+        column-gap: 2rem;
+    }
+    .thesiscover{
+        margin-bottom:2rem;
+    }
 }
