@@ -829,6 +829,7 @@ b{
         float:right;
         display:block;
         border-radius: 5%;
+        transform: rotate(90deg);
     }
     .greetings{
         font-size: 1.5rem;
@@ -878,7 +879,7 @@ b{
     /*PUBLICATIONS*/
     #thesis_container{
         margin: 3rem;
-        max-width:1200px;
+        max-width:1000px;
         margin:auto;
     }
     h2{
