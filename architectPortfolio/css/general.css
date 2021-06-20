@@ -5,7 +5,7 @@
     --light-grey: rgb(106, 105, 105);
     --dark-grey: rgb(85, 84, 84);
     --back-color: rgb(255, 255, 255);
-    --typewriterSpeed: 1s;
+    --typewriterSpeed: 2s;
     --typewriterCharacters: 28;
 }
 .wrapper{
@@ -91,7 +91,11 @@ a.logo, a.logo:visited, a.logo:active {
 #bigform_container{
     font-family:Gill Sans, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin:10%;
-    display: block;
+    display:inline;
+}
+form{
+    display:flex;
+    flex-direction: column;
 }
 .contact{
     display:none;
@@ -99,10 +103,11 @@ a.logo, a.logo:visited, a.logo:active {
 #comments{
     font-family:Gill Sans, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#submit{
+#submit, #reset{
     width:max-content;
     color: var(--back-color);
     background-color: var(--light-grey);
+    display:inline;
 }
 
 #comments:focus, #fname:focus, #lname:focus, #email:focus{
@@ -668,7 +673,6 @@ b{
     #form_container{
         font-family:'Corbel';
         width:80%;
-        margin-top:15%;
         display:flex;
         flex-direction: column;
         max-width:400px;
@@ -677,7 +681,7 @@ b{
         display:none;
     }
     .contact_images{
-        margin:10% 0%;
+        margin:8% 0%;
     }
     #profile_pic{
         width:80%;
@@ -801,7 +805,7 @@ b{
     /*FORM*/
     #bigform_container{
         width:80%;
-        margin:0% 10%;
+        margin:0% 0%;
         display: flex;
         flex-direction: row-reverse;
         gap:5%;
@@ -812,13 +816,13 @@ b{
         display:flex;
         flex-direction: column;
         max-width:400px;
-        margin-top:20%;
     }
     #img_ipad, #img_desktop{
         display:none;
     }
     .contact_images{
-        margin:10% 0%;
+        margin:6% 0%;
+        max-width:800px;
     }
     #img_bigdesktop{
         width:100%;
