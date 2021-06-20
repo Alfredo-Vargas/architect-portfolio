@@ -46,3 +46,81 @@ function animateIn(){
     cross.style.color = "white";
     wrapper.style.width = "100%";
 }
+
+function lightsupLangs(){
+    let mangs = document.getElementsByClassName("mang");
+    let archs = document.getElementsByClassName("arch");
+    for (let i = 0; i < mangs.length; i++){
+        mangs[i].style.opacity= "0.1";
+    }
+    for (let i = 0; i < archs.length; i++){
+        archs[i].style.opacity= "0.3";
+    }
+    document.getElementById("management").style.opacity = "0.1";
+    document.getElementById("architecture").style.opacity = "0.1";
+}
+
+function lightsoutLangs(){
+    let mangs = document.getElementsByClassName("mang");
+    let archs = document.getElementsByClassName("arch");
+    for (let i = 0; i < mangs.length; i++){
+        mangs[i].style.opacity= "1";
+    }
+    for (let i = 0; i < archs.length; i++){
+        archs[i].style.opacity= "1";
+    }
+    document.getElementById("management").style.opacity = "1";
+    document.getElementById("architecture").style.opacity = "1";
+}
+
+function lightsupMangs(){
+    let mangs = document.getElementsByClassName("lang");
+    let archs = document.getElementsByClassName("arch");
+    for (let i = 0; i < mangs.length; i++){
+        mangs[i].style.opacity= "0.1";
+    }
+    for (let i = 0; i < archs.length; i++){
+        archs[i].style.opacity= "0.3";
+    }
+    document.getElementById("languages").style.opacity = "0.1";
+    document.getElementById("architecture").style.opacity = "0.1";
+}
+
+function lightsoutMangs(){
+    let mangs = document.getElementsByClassName("lang");
+    let archs = document.getElementsByClassName("arch");
+    for (let i = 0; i < mangs.length; i++){
+        mangs[i].style.opacity= "1";
+    }
+    for (let i = 0; i < archs.length; i++){
+        archs[i].style.opacity= "1";
+    }
+    document.getElementById("languages").style.opacity = "1";
+    document.getElementById("architecture").style.opacity = "1";
+}
+
+function lightsupArchs(){
+    let mangs = document.getElementsByClassName("mang");
+    let archs = document.getElementsByClassName("lang");
+    for (let i = 0; i < mangs.length; i++){
+        mangs[i].style.opacity= "0.1";
+    }
+    for (let i = 0; i < archs.length; i++){
+        archs[i].style.opacity= "0.3";
+    }
+    document.getElementById("management").style.opacity = "0.1";
+    document.getElementById("languages").style.opacity = "0.1";
+}
+
+function lightsoutArchs(){
+    let mangs = document.getElementsByClassName("mang");
+    let archs = document.getElementsByClassName("lang");
+    for (let i = 0; i < mangs.length; i++){
+        mangs[i].style.opacity= "1";
+    }
+    for (let i = 0; i < archs.length; i++){
+        archs[i].style.opacity= "1";
+    }
+    document.getElementById("management").style.opacity = "1";
+    document.getElementById("languages").style.opacity = "1";
+}
